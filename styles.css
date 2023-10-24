@@ -1,0 +1,22 @@
+body {
+    background-color: greenyellow;
+    height: 100vh;
+    display: flex;
+}
+
+.card {
+    background-color: white;
+    width: 300px;
+    height: 400px;
+    border-color: black;
+    margin:auto;
+    border-radius: 25px;
+    position: relative;
+    display: flex;
+    font-size: 3rem;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
