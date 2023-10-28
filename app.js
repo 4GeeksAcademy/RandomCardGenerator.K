@@ -1,43 +1,41 @@
 import '../style/styles.css';
-
-    //This will include file.js into your bundle.
-    import 'js/file2.js';
-    
-    //this will include the styles at index.css to your bundle.
-    import '../styles/index.css';
-
+import "https://esm.sh/bootstrap";
 
 window.onload = function(){
 
-    window.genCard= function(){
-    
-        var suit = ["♥","♠️","♣️","♦"];
-        var numbers = ["A","2","3","4","5","6","7","8","9","10","J","Q","K"];
-    
-            function randomCard(){
-    
-                var randomSuit = suit[Math.floor(Math.random()*suit.length)];
-                var randomNumber = numbers[Math.floor(Math.random()*numbers.length)];
-    
-                document.querySelector(".icon").innerHTML = randomSuit;
-                document.querySelector(".cardContentContainer").innerHTML = randomNumber;
-                document.querySelector(".iconTwo").innerHTML = randomSuit;
-    
-                if (randomSuit=="♥" || randomSuit=="♦"){
-                    document.querySelector("#maincardcontainer").style.color = "red";
-                }
-    
-                else if (randomSuit=="♠" || randomSuit=="♣️"){
-                    document.querySelector("#maincardcontainer").style.color = "black";
-    
-                }
-    
-            }
-    
-        randomCard();
-    
-    
-        };
-    
-        window.genCard();
-    };
+    // arrays with the numbers and suits for each card   
+let cardType = ["♥","♠️","♣️","♦"];
+let cardNumber = ["A","2","3","4","5","6","7","8","9","10","J","Q","K"];
+
+function randomElement(mainCard){
+    return mainCard[Math.floor(Math.random() * mainCard.length)];
+}
+let center = randomElement (cardNumber);
+let topSuit = randomElement(cardType);
+let bottomSuit = randomElement(cardType);
+
+const p1Element = document.getElementsByClassName("topSuit");
+const p2Element = document.getElementsByClassName("cardNumber");
+const p3Element = document.getElementsByClassName("bottomSuit");
+
+p1Element[0].innerText = topSuit;
+p2Element[0].innerText = center;
+p3Element[0].innerText = bottomSuit;
+
+function colorSuits (suit){
+if (suit === "♦" || suit === "♥" ){
+    return "red";
+}
+    else { return "black"; 
+    }
+}
+
+p1Element[0].style.color = colorSuits (topSuit);
+p2Element[0].style.color = colorSuits (center);
+p3Element[0].style.color= colorSuits (bottomSuit);
+};
+        
+
+
+
+         
