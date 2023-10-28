@@ -2,9 +2,10 @@ body {
     background-color: greenyellow;
     height: 100vh;
     display: flex;
+
 }
 
-.card {
+.card{
     background-color: white;
     width: 250px;
     height: 250px;
@@ -34,13 +35,13 @@ body {
         right: 0;
         font-size: 80px;
     }
-    .spade:top, &.spade: bottom {content: ♠ ;}
-    .heart:top, &.heart: bottom{content: ♥  } color: red;
-    .club:top, &.club:bottom {content: ♣ }
-    .diamond:top, &.diamond:bottom {content: ♦} color:red;
+    
+
 
 }
 
 
- 
+
+
+
 
