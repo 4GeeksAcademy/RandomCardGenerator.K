@@ -1,5 +1,4 @@
-import '../style/styles.css';
-import "https://esm.sh/bootstrap";
+
 
 window.onload = function(){
 
@@ -7,32 +6,36 @@ window.onload = function(){
 let cardType = ["♥","♠️","♣️","♦"];
 let cardNumb = ["A","2","3","4","5","6","7","8","9","10","J","Q","K"];
 
-function randomElement(mainCard){
-    return mainCard[Math.floor(Math.random() * mainCard.length)];
+
+function randomElement(){
+    document.getElementById("cardNumber").innerHTML = 
+    cardNumb[Math.floor(Math.random() * cardNumb.length)];
 }
-let cardNumber = randomElement (cardNumb);
-let topSuit = randomElement(cardType);
-let bottomSuit = randomElement(cardType);
 
-const p1Element = document.getElementsByClassName("topSuit");
-const p2Element = document.getElementsByClassName("cardNumber");
-const p3Element = document.getElementsByClassName("bottomSuit");
+function randomSuits(){
+    let selectedSuit = cardType[Math.floor(Math.random() * cardType.length)];
+    let color = colorSuits(selectedSuit);
+    document.getElementById("topSuit").innerHTML = selectedSuit;    
+    document.getElementById("topSuit").style.color = color;  
+    document.getElementById("bottomSuit").innerHTML = selectedSuit;
+    document.getElementById("bottomSuit").style.color = color;
+}
 
-p1Element[0].innerText = topSuit;
-p2Element[0].innerText = cardNumber;
-p3Element[0].innerText = bottomSuit;
+let cardNumber = randomElement(cardNumb);
+let topSuit = randomSuits(cardType);
+let bottomSuit = randomSuits(cardType);
 
-function colorSuits (suit){
-if (suit === "♦" || suit === "♥" ){
+
+
+function colorSuits(selectedSuit){
+if (selectedSuit === "♦" || selectedSuit === "♥" ){
     return "red";
 }
     else { return "black"; 
     }
 }
 
-p1Element[0].style.color = colorSuits (topSuit);
-p2Element[0].style.color = colorSuits (cardNumber);
-p3Element[0].style.color= colorSuits (bottomSuit);
+
 };
         
 

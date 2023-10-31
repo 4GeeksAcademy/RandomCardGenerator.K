@@ -1,7 +1,9 @@
+
 body {
-    background-color: green;
+    background-image: url('https://images.unsplash.com/photo-1626775238053-4315516eedc9?auto=format&fit=crop&q=80&w=2073&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     height: 100vh;
     display: flex;
+    background-size: cover;
 
 }
 
@@ -23,23 +25,25 @@ body {
     display: inline-block;
 
 }
+.button {
+    margin-top: 45%;
+    margin-left: 43.5%;
+    position: absolute;
+}
 
 .theButton {
     border: none;
-    margin: 30px;
-    padding: 24px;
+    margin: auto;
     min-width: 200px;
     color: black;  
     border-radius: 15px;
-    font-weight: 500;
     height: 50px;
-    position: relative;
-    font-size: 10px;
+    font-size: 20px;
     text-align: center;
-    outline: none;
-    padding: 5px 10px;
     background-color: white ;
     box-shadow: 0 9px gray;
+    
+  
    
 }
     
@@ -59,7 +63,7 @@ button:active {
         left: 140px;
     }
     
-.topSuit {
+#topSuit {
     font-size: 80px;
     position: absolute;
     left: 15px;
@@ -68,13 +72,15 @@ button:active {
 
 }
 
-.bottomSuit {
+#bottomSuit {
     font-size: 80px;
     position:absolute;
     bottom: 10px;
     right: 15px;
     color: red;
+    rotate: 180deg;
 }
+
 
 .heart {
  color: red;

@@ -4,20 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Card Generator</title>
-    <script type="text/javescript" src="bundle/bundle.javescript"></script> 
+    <script src="app.js"></script> 
     <link rel="shortcut icon" href="./4geeks.ico" />
     <link rel="stylesheet" type="text/css" href="./styles.css"/>
 
 <body>
+    
     <div class="mainCard">
-        <span class="topSuit"> ♥ </span>
-        <span class="cardNumber">9</span>
-        <span class="bottomSuit"> ♥ </span>
-        <div class='suits'></div>
-</div>
-        
-<p> <button class="theButton onclick="generateCard()">Generate Card</button></p>
-
+        <span id="topSuit"></span>
+        <span id="cardNumber"></span>
+        <span id="bottomSuit"> </span>
+        </div>
+        <div class="button">
+             <button class="theButton" type="button"  value="click" onclick="window.location.reload()">Generate Card</button>
     </div>
     <script src="styles.css"></script>
 </html>  
@@ -26,5 +25,5 @@
 
 
            
- 
+
    
